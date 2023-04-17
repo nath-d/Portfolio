@@ -1,125 +1,72 @@
-import React from 'react'
-import './Sidebar.css'
-import { ImNewspaper } from "react-icons/im";
-import { FiHome, FiUser, FiSlack } from "react-icons/fi";
+import React, { useState } from "react";
+import { HiMenuAlt3 } from "react-icons/hi";
+import { Link } from "react-router-dom";
 import { BiCodeAlt, BiHome, BiGitBranch, BiPhone } from "react-icons/bi";
+import { FiUser } from "react-icons/fi";
 
-
-const Sidebar = () => {
-    return (
-        <div>
-            <div class="relative min-h-screen md:flex" data-dev-hint="container">
-                <input type="checkbox" id="menu-open" class="hidden" />
-
-                <label for="menu-open" class="absolute right-2 bottom-2 shadow-lg rounded-full p-2 bg-gray-100 text-gray-600 md:hidden" data-dev-hint="floating action button">
-                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </label>
-
-                <header class="bg-gray-600 text-gray-100 flex justify-between md:hidden" data-dev-hint="mobile menu bar">
-                    <a href="#" class="block p-4 text-white font-bold whitespace-nowrap truncate">
-                        Your App is cool
-                    </a>
-
-                    <label for="menu-open" id="mobile-menu-button" class="m-2 p-2 focus:outline-none hover:text-white hover:bg-gray-700 rounded-md">
-                        <svg id="menu-open-icon" class="h-6 w-6 transition duration-200 ease-in-out" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                        <svg id="menu-close-icon" class="h-6 w-6 transition duration-200 ease-in-out" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </label>
-                </header>
-
-                <aside id="sidebar" class="bg-black text-gray-100 md:w-64 w-3/4 space-y-6 pt-6 px-0 absolute inset-y-0 left-0 transform md:relative md:translate-x-0 transition duration-200 ease-in-out  md:flex md:flex-col md:justify-between overflow-y-auto sm:w-screen sm:h-screen lg:w-3/12" data-dev-hint="sidebar; px-0 for frameless; px-2 for visually inset the navigation">
-                    <div class="flex flex-col space-y-6" data-dev-hint="optional div for having an extra footer navigation">
-                        <a href="#" class="text-white flex items-center space-x-2 px-4" title="Your App is cool">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 flex-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                            </svg>
-                            <span class="text-2xl font-extrabold whitespace-wrap truncate">Debarshi Nath</span>
-                        </a>
-
-                        <nav data-dev-hint="main navigation">
-                            <a href="#" class="-space-x-2 mt-52 flex items-center py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white justify-center">
-                            <div className="w-2/4 flex flex-shrink-0 items-center sm:mx-0 sm:h-10 sm:w-10">
-                                    <BiHome
-                                        className="h-6 w-6 text-white"
-                                        aria-hidden="true"
-                                    />
-                                </div>
-                                <div className='w-2/4'>Home</div>
-                            </a>
-                            <a href="#" class="flex items-center py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white justify-center">
-                                <div className="w-2/4 flex flex-shrink-0 items-center sm:mx-0 sm:h-10 sm:w-10">
-                                    <FiUser
-                                        className="h-6 w-6 text-white"
-                                        aria-hidden="true"
-                                    />
-                                </div>
-                                <div className='w-2/4'>About</div>
-                            </a>
-                            <a href="#" class="flex items-center py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white justify-center">
-                                <div className="w-2/4 flex flex-shrink-0 items-center sm:mx-0 sm:h-10 sm:w-10">
-                                    <BiCodeAlt
-                                        className="h-6 w-6 text-white"
-                                        aria-hidden="true"
-                                    />
-                                </div>
-                                <span className='w-2/4'>Skills</span>
-                            </a>
-                            <a href="#" class="flex items-center py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white justify-center">
-                                <div className="w-2/4 flex flex-shrink-0 items-center sm:mx-0 sm:h-10 sm:w-10">
-                                    <BiGitBranch
-                                        className="h-6 w-6 text-white"
-                                        aria-hidden="true"
-                                    />
-                                </div>
-                                <span className='w-2/4'>Projects</span>
-                            </a>
-                            <a href="#" class="flex items-center py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white justify-center">
-                                <div className="w-2/4 flex flex-shrink-0 items-center sm:mx-0 sm:h-10 sm:w-10">
-                                    <BiPhone
-                                        className="h-6 w-6 text-white"
-                                        aria-hidden="true"
-                                    />
-                                </div>
-                                <span className='w-2/4'>Contact Me</span>
-                            </a>
-                            {/* <a href="#" class="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
-                                <span class="ml-6">Without Icon</span>
-                            </a>
-                            <a href="#" class="flex items-center space-x-2 py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white group">
-                                <span class="w-4 h-4 flex-shrink-0 border border-gray-600 rounded group-hover:border-gray-400 transition duration-200"></span>
-                                <span>Without Icon And a bit longer than usual</span>
-                            </a> */}
-                        </nav>
-                    </div>
-
-                    <nav data-dev-hint="second-main-navigation or footer navigation">
-                        <a href="#" class="block py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
-                            asd
-                        </a>
-                        <a href="#" class="block py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
-                            asd
-                        </a>
-                        <a href="#" class="block py-2 px-4 transition duration-200 hover:bg-gray-700 hover:text-white">
-                            asd
-                        </a>
-                    </nav>
-                </aside>
-
-                <main id="content" class="flex-1 p-6 lg:px-8">
-                    <div class="max-w-7xl mx-auto">
-                        <div class="px-4 py-6 sm:px-0">
-                            <div class="border-4 border-dashed border-gray-200 rounded-lg h-96"></div>
-                        </div>
-                    </div>
-                </main>
-            </div>
+const Home = () => {
+  const menus = [
+    { name: "Home", link: "/", icon: BiHome },
+    { name: "About", link: "/", icon: FiUser },
+    { name: "Skills", link: "/", icon: BiCodeAlt },
+    { name: "Projects", link: "/", icon: BiGitBranch, margin: true },
+    { name: "Contact", link: "/", icon: BiPhone },
+    // { name: "Cart", link: "/", icon: FiShoppingCart },
+    // { name: "Saved", link: "/", icon: AiOutlineHeart, margin: true },
+    // { name: "Setting", link: "/", icon: RiSettings4Line },
+  ];
+  const [open, setOpen] = useState(true);
+  return (
+    <section className="flex gap-6">
+      <div
+        className={`bg-zinc-950 min-h-screen ${
+          open ? "w-96" : "w-16"
+        } duration-500 text-white px-4`}
+      >
+        <div className="py-3 flex justify-end">
+          <HiMenuAlt3
+            size={26}
+            className="cursor-pointer"
+            onClick={() => setOpen(!open)}
+          />
         </div>
-    )
-}
+        <div className="mt-52 flex flex-col gap-4 relative">
+          {menus?.map((menu, i) => (
+            <Link
+              to={menu?.link}
+              key={i}
+              className={` ${
+                menu?.margin && "mt-5"
+              } group flex items-center text-sm  gap-3.5 font-medium p-2 hover:bg-gray-800 rounded-md`}
+            >
+              <div>{React.createElement(menu?.icon, { size: "20" })}</div>
+              <h2
+                style={{
+                  transitionDelay: `${i + 1}00ms`,
+                }}
+                className={`whitespace-pre duration-500 ${
+                  !open && "opacity-0 translate-x-28 overflow-hidden"
+                }`}
+              >
+                {menu?.name}
+              </h2>
+              <h2
+                className={`${
+                  open && "hidden"
+                } absolute left-48 bg-white font-semibold whitespace-pre text-gray-900 rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 group-hover:left-14 group-hover:duration-300 group-hover:w-fit  `}
+              >
+                {menu?.name}
+              </h2>
+            </Link>
+          ))}
+        </div>
+      </div>
+      {/* <div className="m-3 text-xl text-gray-900 font-semibold">
+        REACT TAILWIND
+      </div> */}
+    </section>
+  );
+};
 
-export default Sidebar
+export default Home;
+
