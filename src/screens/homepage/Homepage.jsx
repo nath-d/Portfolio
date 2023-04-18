@@ -10,7 +10,7 @@ const Homepage = () => {
             <div>
                 <Sidebar/>
             </div>
-            <div>
+            <div className='max-w-full'>
                 <Landing/>
             </div>
 

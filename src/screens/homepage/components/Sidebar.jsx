@@ -6,11 +6,11 @@ import { FiUser } from "react-icons/fi";
 
 const Home = () => {
   const menus = [
-    { name: "Home", link: "/", icon: BiHome },
-    { name: "About", link: "/", icon: FiUser },
-    { name: "Skills", link: "/", icon: BiCodeAlt },
-    { name: "Projects", link: "/", icon: BiGitBranch, margin: true },
-    { name: "Contact", link: "/", icon: BiPhone },
+    { name: "H O M E", link: "/", icon: BiHome },
+    { name: "A B O U T", link: "/", icon: FiUser },
+    { name: "S K I L L S", link: "/", icon: BiCodeAlt },
+    { name: "P R O J E C T S", link: "/", icon: BiGitBranch, margin: true },
+    { name: "C O N T A C T", link: "/", icon: BiPhone },
     // { name: "Cart", link: "/", icon: FiShoppingCart },
     // { name: "Saved", link: "/", icon: AiOutlineHeart, margin: true },
     // { name: "Setting", link: "/", icon: RiSettings4Line },
@@ -21,7 +21,7 @@ const Home = () => {
       <div
         className={`bg-zinc-950 min-h-screen ${
           open ? "w-96" : "w-16"
-        } duration-500 text-white px-4`}
+        } duration-500 text-white px-4 font-mont`}
       >
         <div className="py-3 flex justify-end">
           <HiMenuAlt3
@@ -37,7 +37,7 @@ const Home = () => {
               key={i}
               className={` ${
                 menu?.margin && ""
-              } group flex items-center text-lg gap-3.5 font-medium p-2 hover:bg-gray-800 rounded-md`}
+              } group flex items-center text-md gap-3.5 font-mont p-2 hover:bg-gray-800 rounded-md`}
             >
               <div>{React.createElement(menu?.icon, { size: "22" })}</div>
               <h2
