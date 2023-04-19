@@ -2,18 +2,15 @@ import React from 'react'
 import Sidebar from './components/Sidebar'
 import Landing from './components/Landing'
 import './components/Sidebar.css'
+import Navbar from './components/Navbar'
 
 const Homepage = () => {
-  const red = {backgroundColor: "#C3073F"}
-  const pink = {backgroundColor: "#950740"}
-  const darkRed = {backgroundColor: "#6F2232"}
-  const grey = {backgroundColor: "#4E4E50"}
-  const darkGrey = {backgroundColor: "#1A1A1D"}
+
   return (
     <>
-        <div className='flex' style={{...darkGrey}}>
+        <div className='bg-[#0A1828]'>
             <div>
-                <Sidebar/>
+                <Navbar/>
             </div>
             <div className='max-w-full'>
                 <Landing/>
