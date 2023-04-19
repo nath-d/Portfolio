@@ -12,9 +12,9 @@ const Homepage = () => {
             <div>
                 <Navbar/>
             </div>
-            {/* <div className='max-w-full'>
+            <div className='max-w-full'>
                 <Landing/>
-            </div> */}
+            </div>
 
         </div>
     </>
