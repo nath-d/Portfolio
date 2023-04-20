@@ -12,7 +12,7 @@ const Navbar = () => {
     const handleClick = () => setNav(!nav)
     
     return (
-        <div className='font-mont font-semibold fixed w-screen h-[80px] flex justify-end items-center px-4 bg-[#0A1828] text-[#178582] py-6 border-b-2 border-[#BFA181] '>
+        <div className='font-mont font-semibold fixed w-screen h-[80px] flex justify-end items-center px-4 bg-[#0A1828] text-gray-300 py-6 border-b-2 border-[#BFA181] '>
             {/* menu */}
 
             <ul className='hidden md:flex'>
