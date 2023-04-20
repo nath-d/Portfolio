@@ -4,12 +4,15 @@ import { HiMenuAlt3 } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import { BiCodeAlt, BiHome, BiGitBranch, BiPhone } from "react-icons/bi";
 import { FiUser } from "react-icons/fi";
+import './Sidebar.css'
 
 const Navbar = () => {
+    
     const [nav, setNav] = useState(false)
     const handleClick = () => setNav(!nav)
+    
     return (
-        <div className='font-mont font-semibold fixed w-full h-80px] flex justify-end items-center px-4 bg-[#0A1828] text-[#178582] py-6'>
+        <div className='font-mont font-semibold fixed w-screen h-[80px] flex justify-end items-center px-4 bg-[#0A1828] text-[#178582] py-6 border-b-2 border-[#BFA181] '>
             {/* menu */}
 
             <ul className='hidden md:flex'>
