@@ -21,5 +21,9 @@ code {
     @apply px-4;
     @apply cursor-pointer;
   }
+  underline{
+    text-decoration-color: red;
+    text-decoration: underline;
+}
 }
 

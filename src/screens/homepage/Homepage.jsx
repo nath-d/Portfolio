@@ -8,15 +8,8 @@ const Homepage = () => {
 
   return (
     <>
-        <div className='bg-[#0A1828]'>
-            <div>
-                <Navbar/>
-            </div>
-            <div className='max-w-full'>
-                <Landing/>
-            </div>
-
-        </div>
+      <Navbar/>
+      <Landing/>
     </>
   )
 }

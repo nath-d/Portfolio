@@ -9,15 +9,15 @@ const Navbar = () => {
     const [nav, setNav] = useState(false)
     const handleClick = () => setNav(!nav)
     return (
-        <div className='font-mont font-semibold sticky w-full h-[90px] flex justify-end items-center px-4 bg-[#0A1828] text-[#178582]'>
+        <div className='font-mont font-semibold fixed w-full h-80px] flex justify-end items-center px-4 bg-[#0A1828] text-[#178582] py-6'>
             {/* menu */}
 
             <ul className='hidden md:flex'>
-                <li>HOME</li>
-                <li>ABOUT</li>
-                <li>SKILLS</li>
-                <li>PROJECTS</li>
-                <li>CONTACT</li>
+                <li className='hover:text-[#BFA181]'>HOME</li>
+                <li className='hover:text-[#BFA181]'>ABOUT</li>
+                <li className='hover:text-[#BFA181]'>SKILLS</li>
+                <li className='hover:text-[#BFA181]'>PROJECTS</li>
+                <li className='hover:text-[#BFA181]'>CONTACT</li>
             </ul>
 
             {/* hamburger */}
