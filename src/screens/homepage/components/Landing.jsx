@@ -23,7 +23,7 @@ const Landing = () => {
       {/* container */}
       <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full lg:ml-[100px]'>
         <p className='text-gray-300 font-mont text-base p-2'>Hi, I am</p>
-        <h1 className='text-4xl sm:text-7xl font-lato text-[#BFA181] font-thin'>Debarshi Nath.</h1>
+        <h1 className='text-4xl sm:text-7xl font-lato text-[#BFA181] font-thin z-10'>Debarshi Nath.</h1>
         <br />
         <br />
         <h2 className='text-4xl sm:text-8xl font-lato text-[#BFA181] font-bold'>FULL STACK DEVELOPER</h2>
