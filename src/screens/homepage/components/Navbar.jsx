@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { BiCodeAlt, BiHome, BiGitBranch, BiPhone } from "react-icons/bi";
 import { FiUser } from "react-icons/fi";
 import './Sidebar.css'
+import Logo from '../../../assets/logo.png'
 
 const Navbar = () => {
     
@@ -12,9 +13,12 @@ const Navbar = () => {
     const handleClick = () => setNav(!nav)
     
     return (
-        <div className='font-mont font-semibold fixed w-screen h-[80px] flex justify-end items-center px-4 bg-[#0A1828] text-gray-300 py-6 border-b-2 border-[#BFA181] '>
+        <div className='font-mont font-semibold fixed w-screen h-[80px] flex justify-between items-center px-4 bg-[#0A1828] text-gray-300 py-6 border-b-2 border-[#BFA181]'>
+            <div>
+                <img src={Logo} alt='Logo Image' style={{width: '400px'}} className='pt-20'/>
+            </div>
+            
             {/* menu */}
-
             <ul className='hidden md:flex'>
                 <li className='hover:text-[#BFA181]'>HOME</li>
                 <li className='hover:text-[#BFA181]'>ABOUT</li>
